@@ -1,0 +1,50 @@
+.sidebar {
+    width: 90px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 100vh;
+    z-index: 9999;
+    ul li a {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        padding: 0 3px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            height: 24px;
+            width: 3px;
+            background-color: transparent;
+            border-radius: 0 3px 3px 0;
+        }
+        &.active {
+            filter: invert(64%) sepia(90%) saturate(491%) hue-rotate(358deg) brightness(103%) contrast(97%);
+            &::before {
+                background-color: #FBBA07;
+            }
+        }
+    }
+}
+.sidebar_head {
+    height: 90px;
+    width: 100%;
+    position: relative;
+    background-color: #ED1B2E;
+    margin-bottom: 70px;
+    &::after {
+        content: "";
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: rgba($color: #FFF, $alpha: 0.5);
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+    }
+}

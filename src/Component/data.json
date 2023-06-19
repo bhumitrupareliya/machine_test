@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "name": "Root",
+      "dec": "Managing director",
+      "children": [
+        {
+          "id": 2,
+          "name": "Child 1",
+          "dec": "Managing1 ",
+          "children": [
+            {
+              "id": 3,
+              "name": "Grand Child",
+              "dec": "Managing director2"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Child 2",
+          "dec": "Managing director3",
+          "children": [
+            {
+              "id": 5,
+              "name": "Grand Child",
+              "dec": "Managing director4",
+              "children": [
+                {
+                    "id": 6,
+                    "name": "Great Grand Child 1",
+                    "dec": "Managing director5",
+                    "rtl": true
+                  },
+                {
+                  "id": 7,
+                  "name": "Grand Grand Child 2",
+                  "dec": "Managing director6",
+                  "rtl": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Child 3",
+          "dec": "Managing child 3"
+        }
+      ]
+    }
+  ]

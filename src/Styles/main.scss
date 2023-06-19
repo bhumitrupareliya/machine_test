@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.main_wrap {
+    padding-left: 90px;
+    position: relative;
+}
+.main_wrap_inner {
+    padding-top: 90px;
+    position: relative;
+}
+
+
+  .org-tree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    overflow: auto;
+  }
+  .org-tree ul {
+    padding-top: 40px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+  }
+  .org-tree > ul > li {
+    margin: 0 auto;
+  }
+  .org-tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding-top: 40px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+  }
+  
+  /*We will use ::before and ::after to draw the connectors*/
+  
+  .org-tree li::before,
+  .org-tree li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid #E7E5E4;
+    width: 50%;
+    height: 40px;
+  }
+  .org-tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #E7E5E4;
+  }
+  
+  .org-tree li:only-child::after,
+  .org-tree li:only-child::before {
+    display: none;
+  }
+  
+  .org-tree li:only-child {
+    padding-top: 0;
+  }
+  
+  .org-tree li:first-child::before,
+  .org-tree li:last-child::after {
+    border: 0 none;
+  }
+  
+  .org-tree li:last-child::before {
+    border-right: 1px solid #E7E5E4;
+    border-radius: 0 15px 0 0;
+    -webkit-border-radius: 0 15px 0 0;
+    -moz-border-radius: 0 15px 0 0;
+  }
+  .org-tree li:first-child::after {
+    border-radius: 15px 0 0 0;
+    -webkit-border-radius: 15px 0 0 0;
+    -moz-border-radius: 15px 0 0 0;
+  }
+  
+  .org-tree ul ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #E7E5E4;
+    width: 0;
+    height: 40px;
+  }
+  
+  
+  .card {
+    position: relative;
+    padding-top: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .card .image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+    z-index: 100;
+    background-color: #fff;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border: 1px solid #E7E5E4;
+        border-radius: 50%;
+    }
+    img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+      }
+  }
+
+  .card .card-body {
+    background: #F6F6F6;
+    text-align: center;
+    width: 226px;
+    padding-top: 25px;
+    border-radius: 8px;
+    position: relative;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #E7E5E4;
+    padding-bottom: 20px;
+  }
+  
+  .card .card-body h4 {
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 13px;
+    color: #343341;
+    margin: 8px 0;
+  }
+  .card .card-body p {
+    line-height: 20px;
+    font-size: 12px;
+    color: #6A6A6A;
+    margin: 0;
+  }
+.retail_bx {
+    background: #5040A5;
+    border-radius: 100px;
+    width: 58px;
+    height: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    font-size: 10px;
+    color: #FFF;
+    margin-top: 8px;
+    display: inline-block;
+  }
